@@ -1,0 +1,21 @@
+{
+    "name": "moeritzcc-landing",
+    "description": "New Landing page for moeritz.cc",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "gulp && gulp develop",
+        "build": "gulp"
+    },
+    "license": "All rights reserved.",
+    "author": {
+        "name": "Tobias Möritz",
+        "email": "tobias@moeritz.cc",
+        "url": "https://moeritz.cc"
+    },
+    "dependencies": {
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-dart-sass": "^1.0.0",
+        "sass": "^1.26.3"
+    }
+}

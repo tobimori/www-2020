@@ -1,0 +1,105 @@
+
+html, body {
+  font-family: 'Basier Circle', Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background-color: #111111;
+  color: rgba(255,255,255,.4);
+  overflow: hidden;
+  hyphens: auto;
+}
+
+h1::selection, ul::selection, p::selection, span::selection, a::selection {
+  background-color: transparent;
+  color: #282828;
+}
+
+main.container {
+  width: 95%;
+  margin: 2em 2em;
+  animation: moveInLeft 500ms ease;
+
+  h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255,255,255,.9);
+    margin-right: 2em;
+  }
+
+  ul {
+    width: 100vw;
+    list-style: none;
+    margin: 2em 0 2em 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+
+      @media only screen and (max-width: 400px) {
+        display: block;
+      }        
+    }
+  }
+}
+
+figure.lines {
+  opacity: .4;
+  background-image: url("../../img/logolines.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 5vh;
+  bottom: 0;
+  left: 50vw;
+  width: 100vw;
+  height: 100vh;
+  animation: moveInRight 500ms ease;
+
+  @media only screen and (max-width: 770px) {
+    position: absolute;
+    left: 20vw;
+    top: 40vh;
+    bottom: 0;
+  }
+
+  @media only screen and (max-width: 400px) {
+    position: absolute;
+    left: 20vw;
+    top: 60vh;
+    bottom: 0;
+  }  
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  transition: all 250ms ease;
+
+  &:hover {
+    color: rgba(255,255,255,.8);
+  }                
+}
+
+@keyframes moveInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-5rem, 0, 0);
+  } to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes moveInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(5rem, 0, 0);
+  } to {
+    opacity: 0.4;
+    transform: translate3d(0, 0, 0);
+  }
+}
